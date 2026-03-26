@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpellRight</title>
+  
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">✓</div>
+      <span class="logo-name">SpellRight</span>
+      <span class="logo-tag">v1.0</span>
+    </div>
+    <div class="toggle-wrap">
+      <span class="toggle-label" id="enableLabel">On</span>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Underline Style</div>
+    <div class="color-row">
+      <span class="color-label">Color</span>
+      <div class="color-picker-wrap">
+        <span class="color-hex" id="colorHex">#e53e3e</span>
+        <input type="color" id="colorPicker" value="#e53e3e" />
+      </div>
+    </div>
+    <div class="style-row">
+      <button class="style-btn active" data-style="wavy">
+        <span class="style-preview">~∿~</span>Wavy
+      </button>
+      <button class="style-btn" data-style="solid">
+        <span class="style-preview">───</span>Solid
+      </button>
+      <button class="style-btn" data-style="dashed">
+        <span class="style-preview">- - -</span>Dashed
+      </button>
+    </div>
+  </div>
+
+  <div class="dict-section">
+    <div class="section-title">Custom Dictionary</div>
+    <div class="word-list" id="wordList">
+      <span class="empty-list">No custom words yet</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="status-dot" id="statusDot"></div>
+    <span id="statusText">Active on this page</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

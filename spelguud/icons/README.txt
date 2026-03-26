@@ -1,0 +1,1 @@
+The icon kinda sucks, I know, but what else? If you have any ideas, feel free to use them

@@ -1,0 +1,10 @@
+//handy little list so VS Code doesn't mark SpellGuud as a typo (it's not exactly spelled good, you know)
+
+
+{
+    "cSpell.words": [
+        "Guud",
+        "Spel",
+        "SpelGuud"
+    ]
+}

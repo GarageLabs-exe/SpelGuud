@@ -1,0 +1,17 @@
+.spellright-overlay {
+  pointer-events: none !important;
+  user-select: none !important;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.spellright-overlay mark.spellright-error {
+  background: transparent !important;
+  color: transparent !important;
+  position: relative;
+}
+
+.spellright-menu {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}

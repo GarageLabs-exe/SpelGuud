@@ -1,0 +1,2 @@
+# SpelGuud
+Completely localized spellchecker

@@ -2,6 +2,8 @@
 
 SpelGuud is a Chromium extension that compares text inputted in any text fields against its built-in dictionary and the user's custom dictionary. Compared to other spell-checkers, it kinda sucks, but I was making it anyway, so I figured why not.
 
+![SpelGuud at work](readme/spelguudexample.png)
+
 It works on all Chromium-based browsers, like Chrome (duh), Edge, Opera, etc.
 
 # How to use

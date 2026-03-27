@@ -12,7 +12,7 @@ document.addEventListener("input", (e) => {
 (function () {
   'use strict';
 
-  // ── State ────────────────────────────────────────────────────────────────
+  //State
   let settings = { enabled: true, underlineColor: '#e53e3e', underlineStyle: 'wavy', ignoredWords: [], addedWords: [] };
   let COMMON_WORDS = new Set(); 
   let dictionaryReady = false;
@@ -37,7 +37,7 @@ document.addEventListener("input", (e) => {
     }
   }
 
-  // ── Load settings from background ────────────────────────────────────────
+  //Load settings from background
   function loadSettings(cb) {
     chrome.runtime.sendMessage({ type: 'GET_SETTINGS' }, (res) => {
       if (res && res.settings) {
@@ -47,7 +47,7 @@ document.addEventListener("input", (e) => {
     });
   }
 
-  // ── Check if a word is spelled correctly ─────────────────────────────────
+  // Check if a word is spelled correctly
   function isCorrect(word) {
     if (!dictionaryReady) return true; // Don't flag everything as red while loading
     if (!word || word.length < 2) return true;
@@ -64,7 +64,7 @@ document.addEventListener("input", (e) => {
     return COMMON_WORDS.has(w) || COMMON_WORDS.has(base);
   }
 
-  // ── Simple suggestions via edit-distance ────────────────────────────────
+  //Simple suggestions via edit-distance
   function editDistance(a, b) {
     const m = a.length, n = b.length;
     const dp = Array.from({ length: m + 1 }, (_, i) => [i]);
@@ -100,7 +100,7 @@ document.addEventListener("input", (e) => {
       .map(c => c.word);
   }
 
-  // ── Tokenize text into words with positions ───────────────────────────────
+  //Tokenize text into words with positions
   function tokenize(text) {
     const tokens = [];
     const regex = /[a-zA-Z'']+/g;
@@ -455,7 +455,7 @@ document.addEventListener("input", (e) => {
     }
   });
 
-  // ── Init ─────────────────────────────────────────────────────────────────
+  //Init
   loadSettings(() => {
     loadCommonWords(); // Load dictionary then scan page
     pageObserver.observe(document.body, { childList: true, subtree: true });

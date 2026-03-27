@@ -1,12 +1,11 @@
-// SpellRight background service worker
-// Manages dictionary storage and word lists
+
 
 const DEFAULT_SETTINGS = {
   enabled: true,
   underlineColor: '#e53e3e',
-  underlineStyle: 'wavy', // wavy, solid, dashed
+  underlineStyle: 'wavy', 
   ignoredWords: [],
-  addedWords: [] // user's custom dictionary
+  addedWords: [] //The user's custom dictionary
 };
 
 chrome.runtime.onInstalled.addListener(() => {

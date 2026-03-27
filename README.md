@@ -4,6 +4,14 @@ SpelGuud is a Chromium extension that compares text inputted in any text fields 
 
 
 
+
+
+
+
+
+
+
+![SpelGuud main menu](readme/popup.png)
 ![SpelGuud at work](readme/banana.png)
 ![SpelGuud at work some more](readme/spelguudexample.png)
 
